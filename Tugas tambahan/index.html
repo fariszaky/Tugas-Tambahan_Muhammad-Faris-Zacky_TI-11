@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["messi.jpg","ronaldo.jpg","neymar.jpg","mbape.jpg","suarez.jpg"];
+
+            if(pilihan.value == "messi"){
+                let select = list_image[0];
+                document.getElementById("gambar").src = `image/${select}`
+                alert ("ini gambar messi")
+            }
+
+            if(pilihan.value == "ronaldo"){
+                let select = list_image[1];
+                document.getElementById("gambar").src = `image/${select}`
+                alert ("ini gambar ronaldo")
+            }
+
+            if(pilihan.value == "neymar"){
+                let select = list_image[2];
+                document.getElementById("gambar").src = `image/${select}`
+                alert ("ini gambar neymar")
+            }
+
+            if(pilihan.value == "mbape"){
+                let select = list_image[3];
+                document.getElementById("gambar").src = `image/${select}`
+                alert ("ini gambar mbape")
+            }
+
+            if(pilihan.value == "suarez"){
+                let select = list_image[4];
+                document.getElementById("gambar").src = `image/${select}`
+                alert ("ini gambar suarez")
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="messi">Messi</option>
+        <option value="ronaldo">Ronaldo</option>
+        <option value="neymar">Neymar</option>
+        <option value="mbape">Mbape</option>
+        <option value="suarez">Suarez</option>
+    </select>
+
+    <div class="container">
+        <div class="box">
+            <img id="gambar">
+        </div>
+    </div>
+</body>
+</html>
